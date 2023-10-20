@@ -1,11 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "テックマスター機能改善",
-  "version": "1.0",
+  "name": "テックマスター管理機能改善",
+  "version": "1.1",
   "description": "テックマスター管理画面での不具合を改善する拡張機能です",
-  "permissions": [
-    "activeTab"
-  ],
+  "permissions": ["storage", "activeTab"],
   "content_scripts": [
     {
       "matches": ["https://master.tech-camp.in/admin/curriculum_groups*"],
@@ -16,6 +14,12 @@
       "matches": ["https://master.tech-camp.in/admin/curriculums/*"],
       "js": ["curriculum/add_group_id.js", "curriculum/alert_before_close.js"],
       "run_at": "document_end"
-    }
-  ]
+    },
+    {
+      "matches": ["https://master.tech-camp.in/*"],
+      "js": ["all/open_link.js"],
+      "run_at": "document_end"
+    }    
+  ],
+  "options_page": "options.html"
 }

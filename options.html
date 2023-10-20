@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Options</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .settings-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        select {
+            font-size: 16px;
+            padding: 5px;
+            margin-bottom: 20px;
+        }
+        button {
+        font-size: 16px;
+        padding: 10px 20px;
+        margin-top: 20px;
+        display: block;
+        width: 120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    </style>
+</head>
+<body>
+    <h1>URLオープン機能を使用する場合のキー設定</h1>
+    <div class="settings-container">
+        <label for="selectedKey">選択したURLをそのまま開く場合:</label>
+        <select id="selectedKey"></select>
+        <label for="conversionKey">編集画面を開く場合:</label>
+        <select id="conversionKey"></select>
+    </div>
+    <button id="save">Save</button>
+
+    <script src="options.js"></script>
+</body>
+</html>
