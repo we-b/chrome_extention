@@ -6,8 +6,18 @@
   "permissions": ["storage", "activeTab"],
   "content_scripts": [
     {
+      "matches": ["https://master.tech-camp.in/admin/periods/new"],
+      "js": ["periods/set_defaults.js"],
+      "run_at": "document_end"
+    },
+    {
       "matches": ["https://master.tech-camp.in/admin/curriculum_groups*"],
       "js": ["group/filtering.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["https://master.tech-camp.in/admin/curriculums/another_tc_business_department_default_courses/edit*"],
+      "js": ["curriculum/filter_course.js", "curriculum/bulk_register.js"],
       "run_at": "document_end"
     },
     {
@@ -19,7 +29,7 @@
       "matches": ["https://master.tech-camp.in/*"],
       "js": ["all/open_link.js"],
       "run_at": "document_end"
-    }    
+    }
   ],
   "options_page": "options.html"
 }

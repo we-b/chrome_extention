@@ -2,20 +2,21 @@
 let isDragging = false;
 let currentKey = null;
 let startDragX, startDragY;
-let selectedKey = 'z'; 
-let conversionKey = 'x'; 
+let selectedKey = 'z';
+let conversionKey = 'x';
+let adminKey = 'c';
 let boxElement, links = [];
 let originalSelection = null;
 
 document.addEventListener('keydown', (e) => {
-    if (e.key === selectedKey || e.key === conversionKey) {
+    if (e.key === selectedKey || e.key === conversionKey || e.key === adminKey) {
         currentKey = e.key;
         document.addEventListener('mousedown', onMouseDown);
     }
 });
 
 document.addEventListener('keyup', (e) => {
-    if (e.key === selectedKey || e.key === conversionKey) {
+    if (e.key === selectedKey || e.key === conversionKey || e.key === adminKey) {
         currentKey = null;
     }
 });
@@ -80,6 +81,11 @@ function onMouseUp(e) {
             const newUrl = link.href.replace('/v2/curriculums/', '/admin/curriculums/') + '/write';
             window.open(newUrl, '_blank');
         });
+    } else if (currentKey === adminKey) {
+        links.forEach(link => {
+            const newUrl = link.href.replace('/v2/curriculums/', '/admin/curriculums/');
+            window.open(newUrl, '_blank');
+        });
     }
 
     document.body.removeChild(boxElement);
@@ -104,7 +110,7 @@ function onMouseUp(e) {
 }
 
 try {
-    chrome.storage.sync.get(['selectedKey', 'conversionKey'], (result) => {
+    chrome.storage.sync.get(['selectedKey', 'conversionKey', 'adminKey'], (result) => {
         if (chrome.runtime.lastError) {
             console.error(chrome.runtime.lastError);
             return;
@@ -122,6 +128,13 @@ try {
         } else {
             conversionKey = 'x';
             chrome.storage.sync.set({ conversionKey: 'x' });
+        }
+
+        if (result.adminKey) {
+            adminKey = result.adminKey;
+        } else {
+            adminKey = 'c';
+            chrome.storage.sync.set({ adminKey: 'c' });
         }
     });
 } catch (error) {
