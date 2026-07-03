@@ -22,7 +22,9 @@
     { courseId: 427, displayOrder: 15, name: '【AIカレッジ】AI×業務効率化_ver.1.0' },
     { courseId: 429, displayOrder: 16, name: '【AIカレッジ】AIアプリ開発コース_ver.1.0' },
     { courseId: 428, displayOrder: 17, name: '【AIカレッジ】AIエージェントコース_ver.1.0' },
-    { courseId: 431, displayOrder: 18, name: '【AIカレッジ】AI駆動開発_ver.1.0' }
+    { courseId: 431, displayOrder: 18, name: '【AIカレッジ】AI駆動開発_ver.1.0' },
+    { courseId: 437, displayOrder: 19, name: '【AIカレッジ】AIデザイン実践コース_ver.1.0' },
+    { courseId: 446, displayOrder: 20, name: '【AIカレッジ】AI動画クリエイターコース_ver.2.0' }
   ];
 
   // localStorage キーのベース名
@@ -321,7 +323,7 @@
 
     if (startButton) {
       startButton.disabled = false;
-      startButton.textContent = '一括登録開始（19コース）';
+      startButton.textContent = '一括登録開始（21コース）';
     }
   }
 
@@ -338,7 +340,7 @@
 
     if (startButton) {
       startButton.disabled = false;
-      startButton.textContent = '一括登録開始（19コース）';
+      startButton.textContent = '一括登録開始（21コース）';
     }
   }
 
@@ -389,7 +391,7 @@
     // 開始ボタン
     startButton = document.createElement('button');
     startButton.id = 'bulk-register-btn';
-    startButton.textContent = '一括登録開始（19コース）';
+    startButton.textContent = '一括登録開始（21コース）';
     startButton.className = 'btn btn-primary';
     startButton.style.marginRight = '10px';
     startButton.onclick = startBulkRegistration;
@@ -407,7 +409,7 @@
     // 進捗表示
     progressElement = document.createElement('div');
     progressElement.style.cssText = 'margin-bottom: 5px; color: #555; font-weight: bold;';
-    progressElement.textContent = '進捗: 0/19';
+    progressElement.textContent = '進捗: 0/21';
     container.appendChild(progressElement);
 
     // ステータス表示

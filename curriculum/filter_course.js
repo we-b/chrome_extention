@@ -2,8 +2,8 @@
 (function() {
   'use strict';
 
-  // フィルタリング対象のコース名キーワード
-  const courseNameKeyword = 'AIカレッジ';
+  // フィルタリング対象のコース名キーワード（いずれかを含めば表示）
+  const courseNameKeywords = ['AIカレッジ', 'FDE'];
 
   // フィルタリング済みかどうかを記録
   const filteredSelects = new WeakSet();
@@ -28,8 +28,9 @@
 
       const optionText = option.textContent.trim();
 
-      // コース名にキーワードが含まれていない場合は非表示
-      if (!optionText.includes(courseNameKeyword)) {
+      // コース名にいずれのキーワードも含まれていない場合は非表示
+      const matched = courseNameKeywords.some(keyword => optionText.includes(keyword));
+      if (!matched) {
         option.style.display = 'none';
         option.disabled = true;
       }
