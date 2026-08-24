@@ -24,7 +24,8 @@
     { courseId: 428, displayOrder: 17, name: '【AIカレッジ】AIエージェントコース_ver.1.0' },
     { courseId: 431, displayOrder: 18, name: '【AIカレッジ】AI駆動開発_ver.1.0' },
     { courseId: 437, displayOrder: 19, name: '【AIカレッジ】AIデザイン実践コース_ver.1.0' },
-    { courseId: 446, displayOrder: 20, name: '【AIカレッジ】AI動画クリエイターコース_ver.2.0' }
+    { courseId: 446, displayOrder: 20, name: '【AIカレッジ】AI動画クリエイターコース_ver.2.0' },
+    { courseId: 454, displayOrder: 21, name: '【AIカレッジ】Claude Code×マーケ' }
   ];
 
   // localStorage キーのベース名
