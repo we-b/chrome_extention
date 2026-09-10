@@ -324,7 +324,7 @@
 
     if (startButton) {
       startButton.disabled = false;
-      startButton.textContent = '一括登録開始（21コース）';
+      startButton.textContent = `一括登録開始（${coursesToRegister.length}コース）`;
     }
   }
 
@@ -341,7 +341,7 @@
 
     if (startButton) {
       startButton.disabled = false;
-      startButton.textContent = '一括登録開始（21コース）';
+      startButton.textContent = `一括登録開始（${coursesToRegister.length}コース）`;
     }
   }
 
@@ -392,7 +392,7 @@
     // 開始ボタン
     startButton = document.createElement('button');
     startButton.id = 'bulk-register-btn';
-    startButton.textContent = '一括登録開始（21コース）';
+    startButton.textContent = `一括登録開始（${coursesToRegister.length}コース）`;
     startButton.className = 'btn btn-primary';
     startButton.style.marginRight = '10px';
     startButton.onclick = startBulkRegistration;

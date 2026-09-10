@@ -11,6 +11,11 @@
       "run_at": "document_end"
     },
     {
+      "matches": ["https://master.tech-camp.in/admin/periods*"],
+      "js": ["periods/create_assist.js"],
+      "run_at": "document_end"
+    },
+    {
       "matches": ["https://master.tech-camp.in/admin/curriculum_groups*"],
       "js": ["group/filtering.js"],
       "run_at": "document_end"
