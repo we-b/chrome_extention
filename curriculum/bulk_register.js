@@ -25,7 +25,8 @@
     { courseId: 431, displayOrder: 18, name: '【AIカレッジ】AI駆動開発_ver.1.0' },
     { courseId: 437, displayOrder: 19, name: '【AIカレッジ】AIデザイン実践コース_ver.1.0' },
     { courseId: 446, displayOrder: 20, name: '【AIカレッジ】AI動画クリエイターコース_ver.2.0' },
-    { courseId: 454, displayOrder: 21, name: '【AIカレッジ】Claude Code×マーケ' }
+    { courseId: 454, displayOrder: 21, name: '【AIカレッジ】Claude Code×マーケ' },
+    { courseId: 456, displayOrder: 22, name: '【AIカレッジ】Claude Code のセキュリティ_ver.1.0' }
   ];
 
   // localStorage キーのベース名
@@ -410,7 +411,7 @@
     // 進捗表示
     progressElement = document.createElement('div');
     progressElement.style.cssText = 'margin-bottom: 5px; color: #555; font-weight: bold;';
-    progressElement.textContent = '進捗: 0/21';
+    progressElement.textContent = `進捗: 0/${coursesToRegister.length}`;
     container.appendChild(progressElement);
 
     // ステータス表示
