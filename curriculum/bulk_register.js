@@ -26,7 +26,11 @@
     { courseId: 437, displayOrder: 19, name: '【AIカレッジ】AIデザイン実践コース_ver.1.0' },
     { courseId: 446, displayOrder: 20, name: '【AIカレッジ】AI動画クリエイターコース_ver.2.0' },
     { courseId: 454, displayOrder: 21, name: '【AIカレッジ】Claude Code×マーケ' },
-    { courseId: 456, displayOrder: 22, name: '【AIカレッジ】Claude Code のセキュリティ_ver.1.0' }
+    { courseId: 456, displayOrder: 22, name: '【AIカレッジ】Claude Code のセキュリティ_ver.1.0' },
+    { courseId: 458, displayOrder: 23, name: '【AIカレッジ】AIアプリ開発（Codex版）' },
+    { courseId: 459, displayOrder: 24, name: '【AIカレッジ】AIエージェント（Codex版）' },
+    { courseId: 447, displayOrder: 25, name: '【AIカレッジ】AIアプリ開発（Claude Code版）' },
+    { courseId: 448, displayOrder: 26, name: '【AIカレッジ】AIエージェント（Claude Code版）' }
   ];
 
   // localStorage キーのベース名
