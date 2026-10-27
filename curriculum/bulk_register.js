@@ -21,7 +21,7 @@
     { courseId: 390, displayOrder: 14, name: '【AIカレッジ】Webライティング_ver.1.0' },
     { courseId: 427, displayOrder: 15, name: '【AIカレッジ】AI×業務効率化_ver.1.0' },
     { courseId: 429, displayOrder: 16, name: '【AIカレッジ】AIアプリ開発コース_ver.1.0' },
-    { courseId: 428, displayOrder: 17, name: '【AIカレッジ】AIエージェントコース_ver.1.0' },
+    { courseId: 428, displayOrder: 17, name: '【AIカレッジ】Dify入門（AIボット/AIワークフロー）' },
     { courseId: 431, displayOrder: 18, name: '【AIカレッジ】AI駆動開発_ver.1.0' },
     { courseId: 437, displayOrder: 19, name: '【AIカレッジ】AIデザイン実践コース_ver.1.0' },
     { courseId: 446, displayOrder: 20, name: '【AIカレッジ】AI動画クリエイターコース_ver.2.0' },
